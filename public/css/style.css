@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*Variables*/
+:root {
+    --Amarillo: #EAC926;
+    --Azul: #03264C;
+    --Celeste: #1259c3;
+    --Gris-oscuro: #666;
+    --Gris-claro: #ebebeb;
+    --Verde: #39b54a;
+    --roboto: 'Roboto', sans-serif;
+    --parrafo: 12px;
+    --titulo: 24px;
+    --precio: 18px;
+    --descuento: 16px;
+    --descripcion: 16px;
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*header*/
+li {
+    list-style: none;
+}
+
+body {
+    font-family: var(--roboto);
+    background-color: var(--Gris-claro);
+    
+}
+
+header {
+    background-color: var(--Amarillo);
+    font-size: 12px;
+    padding: 25px 0;
+}
+
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+header div.logo {
+    padding: 10px;
+   width: 50%;
+  
+}
+
+header div.busqueda {
+    padding: 10px;
+    width: 50%;
+}
+
+/*header .busqueda {
+    position: relative;
+}
+header #lupa {
+    position: absolute;
+    top: 125%;
+    transform: translateY(-125%);
+    left: 45%;
+}*/
+
+header input {
+    width: 80%;
+}
+#lupa {
+    margin-left: 15px;
+}
+
+header p {
+    font-size: var(--parrafo);
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    
+}
+
+nav {
+    background-color: var(--Amarillo);
+}
+
+nav ul li a {
+    font-size: var(--parrafo);
+    text-decoration: none;
+    color: black;
+    text-align: left;
+    text-decoration: none; 
+    padding:0px;
+}
+
+nav .lista-superior {
+    margin-bottom: 15px;
+}
+
+
+div.menu {
+    background-color: var(--Amarillo);
+    padding-bottom: 15px;
+}
+ div.burger-menu i {
+    background-color: var(--Celeste);
+    border-radius: 3px;
+    color: white;
+    width: 15px;
+    height: 15px;
+    padding: 15px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+/*main*/
+
+
+
+main {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+
+}
+
+.banner {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+main h4 {
+    font-size: var(--titulo);
+    color: var(--Gris-oscuro);
+    margin: 15px 0;
+}
+
+main section article {
+    margin-bottom: 10px;
+
+
+}
+
+main section article .article-description {
+    border-top: 1px solid var(--Gris-claro);
+    padding: 15px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+main section article .article-description p {
+    font-size: var(--precio);
+    width: 30%;
+}
+main section article .article-description  .descuento {
+    color: var(--Verde);
+    width: 70%;
+    font-size: var(--descuento);
+}
+
+main section article .article-description h5 {
+    font-size: var(--descripcion);
+    padding-top: 10px;
+    
+}
+main section article .truck-icon {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--Verde);
+    color: var(--Verde);
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    
+}
+
+/*footer*/
+
+footer {
+    padding: 50px 10px 10px;
+    background-color: white;
+}
+
+footer article {
+    text-align: center;
+    margin: 0px 25px 50px;
+}
+
+footer article h4 {
+    font-size: var(--descripcion);
+}
+
+footer article p {
+    font-size: var(--parrafo);
+}
+
+footer article i {
+    color: var(--Celeste);
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#copyright {
+    font-size: var(--parrafo);
+    text-align: left;
+}
+
+@media(max-width:360px) {
+    main section .article-description h5 {
+        display: none;
+    }
+    .lista-inferior, .lista-superior {
+        display: none;
+    }
+}
+
+@media (min-width:361px) {
+    main section article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+   div.burger-menu {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    main section .product-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;   
+    }
+   main section article {
+    max-width: 45%;
+   }
+   header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+   }
+
+   header div.logo {
+    width: 33%;
+}
+
+    header div.busqueda {
+        width: 33%;
+    }
+
+    header p {
+        width: 33%;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        width: 45%;
+    }
+}
+
+@media (min-width: 1024px) {
+    main section .product-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;   
+    }
+   main section article {
+    max-width: 23%;
+   }
+
+}
